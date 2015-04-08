@@ -1,5 +1,7 @@
 <?php namespace Iuxmat\Silex\Provider\Fractal;
 
+
+use Iuxmat\Silex\Provider\Fractal\Serializer\VoidSerializer;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use League\Fractal\Manager;
@@ -7,15 +9,16 @@ use League\Fractal\Manager;
 class FractalServiceProvider implements ServiceProviderInterface
 {
     /**
-     * Registers services on the given app.
-     *
-     * This method should only be used to configure services and parameters.
-     * It should not get services.
+     * @param Application $app
      */
     public function register(Application $app)
     {
         $app['fractal'] = $app->share(function () {
-            return new Manager();
+
+            $manager = new Manager();
+            $manager->setSerializer(new VoidSerializer());
+
+            return $manager;
         });
     }
 
