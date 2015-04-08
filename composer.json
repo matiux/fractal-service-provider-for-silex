@@ -1,0 +1,28 @@
+{
+  "name": "iuxmat/fractal-service-provider-for-silex",
+  "description": "Another Fractal Silex service provider",
+  "keywords": [
+    "fractal",
+    "silex",
+    "service",
+    "provider"
+  ],
+  "authors": [
+    {
+      "name": "Matteo Galacci",
+      "email": "m.galacci@gmail.com",
+      "role": "developer"
+    }
+  ],
+  "require-dev": {
+
+    "silex/silex"                           : "~1.2",
+    "league/fractal"                        : "0.12.*"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Osprey\\"  : "src/Iuxmat/"
+    }
+  }
+}
