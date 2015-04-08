@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="tests/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Silex Fractal Service Provider Test Suite">
+            <directory>tests/Iuxmat/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/Iuxmat/</directory>
+        </whitelist>
+    </filter>
+</phpunit>

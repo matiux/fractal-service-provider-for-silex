@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Osprey\\"  : "src/Iuxmat/"
+      "Iuxmat\\"  : "src/Iuxmat/"
     }
   }
 }
